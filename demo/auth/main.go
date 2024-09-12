@@ -29,6 +29,7 @@ func main() {
 	s := imap.NewServer(
 		imap.ListenOption("127.0.0.1:1193"),
 		imap.AuthStoreOption(a),
+		imap.StoreOption(imap.NewDummyMailstore()),
 	)
 
 	// Firing up the server
