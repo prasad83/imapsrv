@@ -119,3 +119,8 @@ func (m *dummyMailstore) RecentMessages(mbox int64) (int64, error) {
 func (m *dummyMailstore) NextUid(mbox int64) (int64, error) {
 	return 9, nil
 }
+
+// Create new instance of DummyMailstore
+func NewDummyMailstore() Mailstore {
+	return &dummyMailstore{}
+}
